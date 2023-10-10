@@ -9,6 +9,15 @@
 <body>
     <h1>Hello, Tizen!</h1>
     <h2>CSS test</h2>
+    <p id="userAgent"></p>
+
+    <script>
+        // Get the User-Agent string
+        var userAgentString = navigator.userAgent;
+
+        // Display it on the page
+        document.getElementById("userAgent").textContent = "User Agent: " + userAgentString;
+    </script>
 </body>
 
 </html>
