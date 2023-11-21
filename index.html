@@ -21,7 +21,7 @@
         document.getElementById("userAgent").textContent = "User Agent: " + userAgentString;
 
         document.addEventListener('keydown', (event) => {
-            // console.log(event);
+            event.preventDefault();
             document.getElementById("keyCode").textContent = "KeyCode: " + event.keyCode + ' / ' + event.which;
         });
 
