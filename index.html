@@ -12,6 +12,7 @@
     <p id="userAgent"></p>
     <hr />
     <p id="keyCode"></p>
+    <p id="beenHidden"></p>
 
     <script>
         // Get the User-Agent string
@@ -23,6 +24,15 @@
         document.addEventListener('keydown', (event) => {
             event.preventDefault();
             document.getElementById("keyCode").textContent = "KeyCode: " + event.keyCode + ' / ' + event.which;
+        });
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Behavior when application is hidden
+                document.getElementById('beenHidden').textContent = "HIDDEN";
+            } else {
+                // Behavior when application is resumed
+            }
         });
 
     </script>
